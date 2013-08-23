@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>one time uploader</title>
+<!-- Bootstrap -->
+<link href="http://jasny.github.com/bootstrap/assets/css/bootstrap.css" rel="stylesheet">
+<link href="http://jasny.github.com/bootstrap/assets/css/bootstrap-responsive.css" rel="stylesheet">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+<script type="text/javascript" src="http://jasny.github.com/bootstrap/assets/js/bootstrap-fileupload.js"></script>
+
+</head>
+<body>
+<div style="height:200px"></div>
+			<div class="hero-unit span7 offset2">
+				<center><h1>one time uploader</h1></center>
+<div style="height:30px"></div>
+				<p>Use this form to upload one file. You will recieve a link to the file you uploaded. Afterwards, this page will disappear, and you will not be able to upload any more files.</p>
+				<hr>
+<div style="height:50px"></div>
+<center>
+<form action="./upload/" method="post" enctype="multipart/form-data">
+	{% csrf_token %}
+<div class="fileupload fileupload-new" data-provides="fileupload">
+<div class="input-append">
+    <div class="uneditable-input span2"><i class="icon-file fileupload-exists"></i> <span class="fileupload-preview"></span></div><span class="btn btn-file"><span class="fileupload-new">Select file</span><span class="fileupload-exists">Change</span><input type="file"  name="docfile" /></span><a href="#" class="btn fileupload-exists" data-dismiss="fileupload">Remove</a>
+
+<div style="height:20px"></div>
+					<p><button type="submit" class="btn">upload</button></p>
+</div>
+</div>
+</form>
+</center>
+
+			</div>
+</body>
+</html>
